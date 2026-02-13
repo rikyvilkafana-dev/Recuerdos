@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-
-    <!-- ESTA LÍNEA ES LA CLAVE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Recuerdos</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayuri ✨</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-<div class="app">
+<h1 id="titulo">Para ti 🤍</h1>
 
-    <!-- REPRODUCTOR -->
-    <div class="reproductor">
-        <img src="fotos/foto1.jpg" class="miniatura">
-        <div class="info">
-            <p class="titulo">Nuestra canción</p>
-            <p class="tiempo" id="tiempo">0:00</p>
-        </div>
-        <button id="play">▶</button>
-    </div>
-
-    <!-- GALERÍA -->
-    <div class="galeria">
-        <button class="flecha" onclick="anterior()">❮</button>
-
-        <div class="marco">
-            <img id="fotoGrande" src="fotos/foto1.jpg">
-        </div>
-
-        <button class="flecha" onclick="siguiente()">❯</button>
-    </div>
-
+<!-- 🎵 REPRODUCTOR -->
+<div class="player">
+  <p id="song-name">Nuestra canción</p>
+  <audio id="audio"></audio>
+  <button onclick="prevSong()">⏮</button>
+  <button onclick="togglePlay()">▶️</button>
+  <button onclick="nextSong()">⏭</button>
 </div>
 
-<audio id="audio" src="musica.mp3"></audio>
+<p class="frase">
+  No sé en qué momento, pero te volviste mi lugar seguro 🤍
+</p>
+
+<!-- 📸 FOTO ÚNICA DESLIZABLE -->
+<div class="album">
+  <img id="foto" src="fotos/1.jpg">
+</div>
+
+<div class="effects"></div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
