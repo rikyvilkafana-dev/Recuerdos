@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #1a1a1a, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.app {
+    max-width: 380px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* REPRODUCTOR */
+.reproductor {
+    background: #000;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.miniatura {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.titulo {
+    font-size: 14px;
+    margin: 0;
+}
+
+.tiempo {
+    font-size: 12px;
+    color: #aaa;
+}
+
+#play {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* GALERÍA */
+.galeria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flecha {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.marco {
+    width: 260px;
+    height: 360px;
+    padding: 8px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 18px;
+    animation: brillo 6s infinite alternate;
+}
+
+.marco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes brillo {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.2); }
+}
