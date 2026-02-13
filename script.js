@@ -1,11 +1,10 @@
+
 /* =======================
    🎵 PLAYLIST DE MÚSICA
 ======================= */
 
 const songs = [
-  { name: "Canción 1", file: "musica/cancion1.mp3" },
-  { name: "Canción 2", file: "musica/cancion2.mp3" },
-  { name: "Canción 3", file: "musica/cancion3.mp3" }
+  { name: "Nuestra canción 💛", file: "musica/musica.mp3" }
 ];
 
 let songIndex = 0;
@@ -22,17 +21,11 @@ function togglePlay() {
   audio.paused ? audio.play() : audio.pause();
 }
 
-function next() {
-  songIndex = (songIndex + 1) % songs.length;
-  loadSong();
-  audio.play();
-}
+function next() {}
+function prev() {}
 
-function prev() {
-  songIndex = (songIndex - 1 + songs.length) % songs.length;
-  loadSong();
-  audio.play();
-}
+
+
 
 /* =======================
    📸 SLIDE DE FOTOS (SUAVE)
@@ -126,6 +119,61 @@ function explotarSayuri() {
     titulo.style.transform = "scale(1)";
   }, 800);
 }
+
+/* =======================
+   🎬 ANIMACIÓN EN ORDEN
+======================= */
+
+window.addEventListener("load", () => {
+  const player = document.getElementById("player");
+  const phrase = document.getElementById("phrase");
+  const name = document.getElementById("name");
+
+  setTimeout(() => {
+    player.classList.remove("hidden");
+    player.classList.add("show");
+  }, 500);
+
+  setTimeout(() => {
+    phrase.classList.remove("hidden");
+    phrase.classList.add("show");
+  }, 1500);
+
+});
+
+
+document.body.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    document.getElementById("playBtn").textContent = "⏸";
+  }
+}, { once: true });
+
+
+
+/* =======================
+   ⏱️ SAYURI APARECE CON LA MÚSICA
+======================= */
+
+const audioPlayer = document.getElementById("audio");
+const sayuri = document.getElementById("sayuri");
+
+// segundo exacto donde quieres que aparezca (ajústalo escuchando la canción)
+const momentoClave = 2;
+
+audioPlayer.addEventListener("timeupdate", () => {
+  if (audioPlayer.currentTime >= momentoClave) {
+    sayuri.classList.remove("hidden");
+    sayuri.classList.add("show");
+  }
+});
+
+
+
+
+document.getElementById("verVideo").addEventListener("click", function () {
+  window.open("AQUI_TU_VIDEO", "_blank");
+});
 
 
 

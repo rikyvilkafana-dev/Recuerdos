@@ -3,57 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sayuri ✨</title>
+  <title>✨SAYURI✨</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="estilos.css">
 </head>
+
+
+
+
+
 
 <body>
 
   <!-- 🌼 EFECTOS FLOTANTES -->
   <div class="effects"></div>
 
-  <!-- ✨ TÍTULO -->
-  <h1 id="titulo">SAYURI</h1>
 
-  <!-- 🎵 REPRODUCTOR DE MÚSICA -->
-  <div class="music-player">
 
-    <!-- portada pequeña -->
-    <img src="fotos/cover.jpg" class="music-cover" alt="cover">
 
-    <div class="music-info">
-      <p id="song-name" class="music-title">Canción 1</p>
 
-      <div class="controls">
-        <button onclick="prev()">⏮</button>
-        <button onclick="togglePlay()">▶</button>
-        <button onclick="next()">⏭</button>
-      </div>
+
+
+
+ <!-- 🎵 REPRODUCTOR DE MÚSICA -->
+<div class="music-player hidden" id="player">
+
+  <!-- portada -->
+  <img src="fotos/cover.jpg" class="music-cover" alt="cover">
+
+  <!-- info -->
+  <div class="music-info">
+    <p id="song-name" class="music-title">Porfa No te Valla </p>
+
+    <div class="controls">
+      <button onclick="prev()">⏮</button>
+      <button onclick="togglePlay()" id="playBtn">▶</button>
+      <button onclick="next()">⏭</button>
     </div>
-
-    <audio id="audio"></audio>
   </div>
 
+  <audio id="audio"></audio>
+</div>
+
+
+
   <!-- 💌 FRASE -->
-  <p class="love-phrase">
+  <p class="love-phrase hidden" id="phrase">
     No sé en qué momento, pero te volviste mi lugar seguro
   </p>
 
   <!-- 💖 NOMBRE -->
-  <h2 class="name">Sayuri</h2>
+   <h2 class="name hidden" id="sayuri">Sayuri ✨</h2>
+
 
   <!-- 📸 ÁLBUM DESLIZABLE -->
   <div class="album">
     <img id="foto" src="fotos/1.jpg" alt="foto">
   </div>
 
+
+<!-- 🌸 FRASE DEBAJO DE LA FOTO -->
+<div class="love-box">
+  <div class="branch top"></div>
+
+  <p class="love-text">
+    “Bueno, aquí estoy. ¿Cuáles son tus otros dos deseos? jejej"
+  </p>
+
+  <div class="branch bottom"></div>
+</div>
+
+
+
   <!-- JS -->
   <script src="script.js"></script>
+
 
 </body>
 </html>
 
 
 
+
+<p class="final-message">
+ "" A veces nos perdimos en la distancia y en el dolor, pero cada paso, cada lágrima
+  y cada silencio me enseñaron lo que es amar de verdad. Gracias a ti maduré,
+  entendí la paciencia, la esperanza y que lo nuestro vale cada batalla"
+</p>
+
+
+<!-- BOTÓN FINAL -->
+<div class="cierre">
+  <p class="cierre-texto">QUIERES VER ALGO HERMOSO, DA CLICK.</p>
+  <button class="cierre-boton" id="verVideo">Ver</button>
+</div>
