@@ -34,7 +34,9 @@ function prev() {}
 const fotos = [
   "fotos/1.jpg",
   "fotos/2.jpg",
-  "fotos/3.jpg"
+  "fotos/3.jpg",
+  "fotos/4.jpg"
+
 ];
 
 let fotoIndex = 0;
@@ -168,13 +170,26 @@ audioPlayer.addEventListener("timeupdate", () => {
   }
 });
 
+alert("ATTENCION, ESTA PAGINA ESTA CREADA UNICAMENTE PARA LA SEÑORITA SAYURI AMELI, SI USTED ES LA SEÑORITA SAYURI, PORFAVOR ACEPTE Y DESEAMOS QUE DISFRUTE DEL CONTENIDO ✨")
+
 
 
 
 document.getElementById("verVideo").addEventListener("click", function () {
-  window.open("AQUI_TU_VIDEO", "_blank");
+
+  const contenedor = document.getElementById("videoContainer");
+  const video = document.getElementById("miVideo");
+
+  contenedor.style.display = "block";
+  video.play();
+
+  this.style.display = "none";
 });
 
 
 
-alert("SI CONTINUA VERA MUCHO EXCESO DE CARIÑO XD")
+
+
+
+
+
